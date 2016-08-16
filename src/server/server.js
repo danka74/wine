@@ -16,20 +16,20 @@ var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.use(favicon(__dirname + '/favicon.ico'));
+app.use(favicon(__dirname + '/../favicon.ico'));
 app.use(logger('dev'));
 app.use(methodOverride());
 app.use(session({ resave: true,
                   saveUninitialized: true,
-                  secret: '96747385' }));
+                  secret: '9823958935802395823049' }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(multer());
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname,'/../')));
 
 app.route('/')
-  .get(function (req, res) {
-    res.sendFile(path.join(__dirname,'index.html'));
+  .get((req, res) => {
+    res.sendFile(path.join(__dirname,'/../index.html'));
   });
 
 // error handling middleware should be loaded after the loading the routes
