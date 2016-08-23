@@ -19,7 +19,7 @@ var app = express();
 var router = express.Router();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port',  3000);
 app.use(favicon(__dirname + '/../favicon.ico'));
 app.use(logger('dev'));
 app.use(methodOverride());
@@ -29,11 +29,11 @@ app.use(session({ resave: true,
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(multer());
-app.use(express.static(path.join(__dirname,'/../')));
+app.use(express.static(path.join(__dirname,'/../../dist')));
 
-app.route('/')
+app.route('/*')
   .get((req, res) => {
-    res.sendFile(path.join(__dirname,'/../index.html'));
+    res.sendFile(path.join(__dirname,'/../../dist/index.html'));
   });
 
 // connect to mongodb
