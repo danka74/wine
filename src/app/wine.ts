@@ -1,3 +1,8 @@
+
 export class Wine {
-  name:String;
+  name: string;
+  type: string;
+  year: number;
+  count: number;
+  location: string;
 }

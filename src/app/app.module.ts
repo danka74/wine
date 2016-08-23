@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { MaterialModule } from '@angular2-material/core'
+import { MdButtonModule } from '@angular2-material/button';
+import { MdCardModule } from '@angular2-material/card';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { MaterialModule } from '@angular2-material/core'
     CommonModule,
     FormsModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    MdButtonModule,
+    MdCardModule
   ],
   providers: [],
   entryComponents: [AppComponent],

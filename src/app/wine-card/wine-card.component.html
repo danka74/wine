@@ -1,4 +1,13 @@
-<md-card>
-  <md-card-title>{{wine.name}}</md-card-title>
+<md-card [class.selected]="selected" (click)="onSelect()">
+  <md-card-header>
+    <img md-card-avatar src="app/image/bottle.png">
+    <md-card-title>{{wine.name}}</md-card-title>
+    <md-card-subtitle>{{wine.type}}</md-card-subtitle>
+    <span class="badge">{{wine.count}}</span>
+  </md-card-header>
   <md-card-content>WineCardComponent works</md-card-content>
+  <md-card-actions align="end">
+    <button md-button>TASTE</button>
+    <button md-button>EDIT</button>
+  </md-card-actions>
 </md-card>
