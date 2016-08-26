@@ -7,7 +7,7 @@
   </md-card-header>
   <md-card-content>WineCardComponent works</md-card-content>
   <md-card-actions align="end">
-    <button md-button>TASTE</button>
-    <button md-button>EDIT</button>
+    <button md-button (click)="onClickButton('wine-taste')">TASTE</button>
+    <button md-button (click)="onClickButton('wine-edit')">EDIT</button>
   </md-card-actions>
 </md-card>

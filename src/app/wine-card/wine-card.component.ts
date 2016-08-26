@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { MdCard } from '@angular2-material/card';
-import { MdButton, MdButtonModule } from '@angular2-material/button';
+import { MdButton } from '@angular2-material/button';
 import { Wine } from '../wine';
 
 
@@ -17,7 +18,7 @@ export class WineCardComponent implements OnInit {
   @Input()
   wine: Wine;
 
-  constructor() {
+  constructor(private router: Router) {
     this.selected = false;
   }
 
@@ -27,6 +28,12 @@ export class WineCardComponent implements OnInit {
   onSelect() {
     this.selected = ! this.selected;
     console.log(this.selected);
+  }
+
+  onClickButton(path: string) {
+    let link = [ path, this.wine.id ];
+    console.log(link);
+    this.router.navigate(link);
   }
 
 }

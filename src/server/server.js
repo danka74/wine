@@ -14,6 +14,7 @@ const errorHandler = require('errorhandler');
 const mongoose = require('mongoose');
 const restify = require('express-restify-mongoose');
 const Wine = require('./models/wine');
+const Producer = require('./models/producer')
 
 var app = express();
 var router = express.Router();
@@ -31,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(multer());
 app.use(express.static(path.join(__dirname,'/../../dist')));
 
-app.route('/*')
+app.route('/')
   .get((req, res) => {
     res.sendFile(path.join(__dirname,'/../../dist/index.html'));
   });
@@ -40,7 +41,7 @@ app.route('/*')
 mongoose.connect('mongodb://localhost:27017/wine');
 
 restify.serve(router, Wine)
-//restify.serve(router, Wine);
+restify.serve(router, Producer);
 
 app.use(router);
 

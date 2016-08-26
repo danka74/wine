@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { WineListComponent } from './wine-list';
 
 @Component({
