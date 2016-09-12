@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Wine } from '../wine';
 import { WineCardComponent } from '../wine-card';
 import { MdButton } from '@angular2-material/button';
-import { MdIcon } from '@angular2-material/icon';
+import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
 import { WineService } from '../wine.service';
 
 
@@ -11,7 +11,7 @@ import { WineService } from '../wine.service';
   templateUrl: 'wine-list.component.html',
   styleUrls: ['wine-list.component.css'],
   directives: [ WineCardComponent, MdButton, MdIcon ],
-  providers: [ WineService ]
+  providers: [ WineService, MdIconRegistry ]
 })
 export class WineListComponent implements OnInit {
   errorMessage: string;

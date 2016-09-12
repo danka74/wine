@@ -7,7 +7,7 @@ import { WineCardComponent } from './wine-card.component';
 
 describe('Component: WineCard', () => {
   it('should create an instance', () => {
-    let component = new WineCardComponent();
+    let component = new WineCardComponent(null);
     expect(component).toBeTruthy();
   });
 });

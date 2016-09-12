@@ -7,7 +7,7 @@ import { WineEditComponent } from './wine-edit.component';
 
 describe('Component: WineEdit', () => {
   it('should create an instance', () => {
-    let component = new WineEditComponent();
+    let component = new WineEditComponent(null, null);
     expect(component).toBeTruthy();
   });
 });

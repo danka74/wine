@@ -25,11 +25,6 @@ export class WineCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect() {
-    this.selected = ! this.selected;
-    console.log(this.selected);
-  }
-
   onClickButton(path: string) {
     let link = [ path, this.wine.id ];
     console.log(link);

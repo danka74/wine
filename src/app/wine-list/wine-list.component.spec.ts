@@ -7,7 +7,7 @@ import { WineListComponent } from './wine-list.component';
 
 describe('Component: WineList', () => {
   it('should create an instance', () => {
-    let component = new WineListComponent();
+    let component = new WineListComponent(null);
     expect(component).toBeTruthy();
   });
 });
